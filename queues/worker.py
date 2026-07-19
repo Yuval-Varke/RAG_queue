@@ -13,7 +13,7 @@ embedding_model = GoogleGenerativeAIEmbeddings(model="gemini-embedding-2")
 
 vector_db = QdrantVectorStore.from_existing_collection(
     url="http://localhost:6333",
-    collection_name="nodejs_docs",
+    collection_name="pythonBOOK",
     embedding=embedding_model,
 )
 
@@ -52,7 +52,9 @@ def process_query(query:str):
             system_instruction=SYSTEM_PROMPT
         )
     )
-    print(f"🤖: {res.text}")
+    print(f"""🤖   =============================================================================================
+          : {res.text}
+          =============================================================================================""")
     return res.text
 
 

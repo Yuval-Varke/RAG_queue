@@ -1,0 +1,9 @@
+Start the docker engine: docker compose up -d
+start qdrant locally through docker: docker run -p 6333:6333 qdrant/qdrant
+
+python .\rag_queue\ingest_pdf.py
+
+
+python -m rag_queue.main
+
+rq worker --worker-class rq.worker.SimpleWorker
