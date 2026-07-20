@@ -11,9 +11,9 @@ from pypdf import PdfReader
 load_dotenv()
 
 
-PDF_PATH = Path(__file__).resolve().parent / "pythonBOOK.pdf"
+PDF_PATH = Path(__file__).resolve().parent / "AIBOOK.pdf"
 QDRANT_URL = "http://localhost:6333"
-COLLECTION_NAME = "pythonBOOK"
+COLLECTION_NAME = "AIBOOK"
 
 
 def chunk_text(text: str, chunk_size: int = 1200, overlap: int = 200) -> list[str]:

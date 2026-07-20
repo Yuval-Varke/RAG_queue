@@ -13,7 +13,7 @@ embedding_model = GoogleGenerativeAIEmbeddings(model="gemini-embedding-2")
 
 vector_db = QdrantVectorStore.from_existing_collection(
     url="http://localhost:6333",
-    collection_name="pythonBOOK",
+    collection_name="AIBOOK",
     embedding=embedding_model,
 )
 
@@ -39,7 +39,7 @@ def process_query(query:str):
     """
 
     res = client.models.generate_content(
-        model="gemini-2.5-flash",
+        model="gemini-3.5-flash",
         contents=f"""
         User question:
             {query}
